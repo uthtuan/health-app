@@ -26,7 +26,8 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
-      "@hooks/*": ["./src/hooks/*"]
+      "@hooks/*": ["./src/hooks/*"],
+      "@assets/*": ["./src/assets/*"],
     },
     "noImplicitAny": false,
     "allowJs": true,

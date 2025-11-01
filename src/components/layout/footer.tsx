@@ -12,18 +12,20 @@ const footerLinks = [
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-gray-700 py-12 flex justify-center">
-      <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 w-full max-w-5xl">
-        {footerLinks.map((item) => (
-          <Button
-            key={item.label}
-            variant="text"
-            className="text-white text-base font-japanese px-2"
-            onClick={() => { }}
-          >
-            {item.label}
-          </Button>
-        ))}
+    <footer className="w-full bg-dark-500 h-[128px] flex items-center">
+      <div className="max-w-[960px] mx-auto w-full">
+        <div className="flex flex-wrap justify-left gap-x-6 w-full ">
+          {footerLinks.map((item) => (
+            <Button
+              key={item.label}
+              variant="text"
+              className="text-white text-[11px] font-japanese px-2"
+              onClick={() => { }}
+            >
+              {item.label}
+            </Button>
+          ))}
+        </div>
       </div>
     </footer>
   );

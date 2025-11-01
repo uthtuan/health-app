@@ -33,7 +33,9 @@ export default {
           500: "#414141",
           600: "#2D2D2D",
         },
-        'custom-gray': "#777777",
+        gray: {
+          500: "#777777",
+        },
         text: {
           DEFAULT: "#414141",
           orange: "#FF963C",

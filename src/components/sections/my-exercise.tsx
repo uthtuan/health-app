@@ -10,7 +10,7 @@ export const MyExercise: React.FC = () => (
   <div className="bg-dark-500 p-6 w-full max-w-6xl mx-auto mt-16"
   >
     <div className="flex items-center gap-6 mb-4">
-      <span className="text-white text-xl font-japanese">MY EXERCISE</span>
+      <span className="text-white text-xl font-japanese">MY <br/> EXERCISE</span>
       <span className="text-white text-3xl font-light tracking-wide">2021.05.21</span>
     </div>
     <style>{`

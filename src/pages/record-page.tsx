@@ -4,9 +4,10 @@ import { MyDiary } from "@/components/sections/my-diary";
 import { BodyRecordChart } from "@/components/sections/body-record-chart";
 import { ChevronUp } from 'lucide-react';
 import SectionsOptions from "@/components/sections/section-options";
+import type { FC } from "react";
 
 
-const RecordPage = () => {
+const RecordPage: FC = () => {
   return (
     <div>
       <div className="max-w-[960px] mx-auto relative">

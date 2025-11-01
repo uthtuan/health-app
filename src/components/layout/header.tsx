@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="w-full bg-dark-500 fixed z-[9999] h-[56px]">
+    <header className="w-full bg-dark-500 fixed top-0 z-[9999] h-[56px]">
       <div className="max-w-[960px] py-2 flex items-center justify-between relative mx-auto">
         <div className="flex items-center">
           <img src="/logo.png" alt="Healthy Logo" className="h-8 mr-2" />
