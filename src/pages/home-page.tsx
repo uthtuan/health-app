@@ -3,7 +3,7 @@
 import ChartContainer from "@/components/ui/chart-container";
 import CircleChart from "@/components/ui/circle-chart";
 import type { FC } from "react";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { bodyRecordChartData } from "@/lib/mockdata";
 import FilterBtn from "@/components/ui/filter-btn";
 import MorningIcon from "@assets/icons/morning.svg?react";
@@ -23,6 +23,18 @@ const filterItems = [
 
 const HomePage: FC = () => {
   const [showCount, setShowCount] = useState(8);
+
+  const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
+
+  const filterOptions = filterItems.map(item => ({ key: item.label, icon: item.icon, label: item.label }));
+
+  const filteredPhotos = useMemo(() => {
+    if (!selectedFilter) return foodPhotos;
+    return foodPhotos.filter(photo => photo.filter === selectedFilter);
+  }, [selectedFilter]);
+
+  const visiblePhotos = filteredPhotos.slice(0, showCount);
+
   return (
     <div className="mx-auto relative pt-[56px]">
       <div className="flex flex-row w-full">
@@ -43,25 +55,35 @@ const HomePage: FC = () => {
         </div>
       </div>
       <div className="flex justify-center gap-16 mt-8 max-w-[960px] mx-auto">
-        {filterItems.map((item) => (
-          <FilterBtn key={item.label} icon={item.icon} label={item.label} />
+        {filterOptions.map((item) => (
+          <FilterBtn
+            key={item.key}
+            icon={item.icon}
+            label={item.label}
+            onClick={() => {
+              setSelectedFilter(prev => prev === item.key ? null : item.key);
+              setShowCount(8);
+            }}
+          />
         ))}
+      </div>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 max-w-[960px] mx-auto mt-10 mb-16">
+        {visiblePhotos.map((item, idx) => <FoodPhotoCard key={idx}
+          image={item.image} day={item.day} filter={item.filter}
+        />)}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 max-w-[960px] mx-auto mt-10">
-        {foodPhotos.slice(0, showCount).map((item, idx) => (
-          <FoodPhotoCard key={idx} {...item} />
-        ))}
-      </div>
-      <div className="flex justify-center my-8">
-        <Button
-          variant="gradient"
-          size="gradient"
-          onClick={() => setShowCount(showCount === 8 ? 16 : 8)}
-        >
-          {showCount === 8 ? '自分の日記をもっと見る' : '自分の日記を閉じる'}
-        </Button>
-      </div>
+      {filteredPhotos.length > 8 && (
+        <div className="flex justify-center mb-16">
+          <Button
+            variant="gradient"
+            size="gradient"
+            onClick={() => setShowCount(showCount === 8 ? filteredPhotos.length : 8)}
+          >
+            {showCount === 8 ? '自分の日記をもっと見る' : '自分の日記を閉じる'}
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

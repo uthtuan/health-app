@@ -12,8 +12,8 @@ const FilterBtn: React.FC<FilterBtnProps> = ({ icon, label, className = "", onCl
     onClick={onClick}
     style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
   >
-    <div className="mb-3 w-12 h-12 flex items-center justify-center">{icon}</div>
-    <span className="text-xl font-normal mt-1">{label}</span>
+    <div className="w-16 h-16 flex items-center justify-center">{icon}</div>
+    <span className="text-[20px] font-normal mt-1">{label}</span>
   </button>
 );
 

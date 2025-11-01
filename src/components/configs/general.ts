@@ -8,10 +8,10 @@ export const footerLinks = [
 ];
 
 export const menuItems = [
-  { label: "自分の記録" },
-  { label: "体重グラフ" },
-  { label: "目標" },
-  { label: "選択中のコース" },
-  { label: "コラム一覧" },
-  { label: "設定" },
+  { label: "自分の記録", path: "/record", auth: true },
+  { label: "体重グラフ", path: "/weight", auth: true },
+  { label: "目標", path: "/goal", auth: true },
+  { label: "選択中のコース", path: "/course", auth: true },
+  { label: "コラム一覧", path: "/discovery", auth: false },
+  { label: "設定", path: "/settings", auth: true },
 ];

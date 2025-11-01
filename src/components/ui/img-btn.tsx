@@ -23,12 +23,12 @@ export const ImgBtn: React.FC<ImgBtnProps> = ({
       />
       <div className="absolute inset-0 bg-black opacity-60" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full w-full">
-        <span className="text-yellow-400 text-2xl font-bold mb-2 mt-16 drop-shadow">
+        <span className="text-yellow-400 text-[25px] mb-2 mt-6 drop-shadow">
           {title}
         </span>
         <Button
           variant="default"
-          className="bg-orange-400 text-white text-base font-japanese px-6 py-2 mt-2"
+          className="bg-orange-400 text-white text-[14px] font-japanese font-light px-6 !py-0 rounded-none w-[160px] h-6"
           onClick={onClick}
         >
           {buttonText}

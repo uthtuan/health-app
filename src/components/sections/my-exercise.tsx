@@ -5,8 +5,8 @@ export const MyExercise: FC = () => (
   <div className="bg-dark-500 p-6 w-full max-w-6xl mx-auto mt-16"
   >
     <div className="flex items-center gap-6 mb-4">
-      <span className="text-white text-xl font-japanese">MY <br /> EXERCISE</span>
-      <span className="text-white text-3xl font-light tracking-wide">2021.05.21</span>
+      <span className="text-white text-[15px] font-inter font-light">MY <br /> EXERCISE</span>
+      <span className="text-white text-[22px] font-light tracking-wide">2021.05.21</span>
     </div>
     <style>{`
         .my-exercise-scrollbar::-webkit-scrollbar {
@@ -38,9 +38,11 @@ export const MyExercise: FC = () => (
             <div className="flex items-center justify-between">
               <div className="flex-1 min-w-0">
                 <span className="text-white text-[15px] font-light font-japanese block">
-                  • {item.name}
+                  • <span className="ml-2">
+                    {item.name}
+                  </span>
                 </span>
-                <span className="text-yellow-400 text-[15px] block leading-tight">
+                <span className="text-yellow-400 text-[15px] block leading-tight ml-4">
                   {item.kcal}kcal
                 </span>
               </div>

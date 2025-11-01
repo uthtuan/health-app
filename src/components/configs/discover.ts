@@ -3,11 +3,11 @@ export const filterItems = [
   { title: "RECOMMENDED DIET", subtitle: "ダイエット" },
   { title: "RECOMMENDED BEAUTY", subtitle: "美容" },
   { title: "RECOMMENDED HEALTH", subtitle: "健康" },
-]
-
+];
 
 export const columnCardData = [
   {
+    key: "diet",
     image: "/photos/column-1.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -15,6 +15,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "diet",
     image: "/photos/column-2.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -22,6 +23,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "health",
     image: "/photos/column-3.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -29,6 +31,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "health",
     image: "/photos/column-4.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -36,6 +39,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "health",
     image: "/photos/column-5.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -43,6 +47,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "beauty",
     image: "/photos/column-6.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -50,6 +55,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "beauty",
     image: "/photos/column-7.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -57,6 +63,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "beauty",
     image: "/photos/column-8.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -64,6 +71,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "diet",
     image: "/photos/column-1.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -71,6 +79,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "health",
     image: "/photos/column-2.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -78,6 +87,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "diet",
     image: "/photos/column-3.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -85,6 +95,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "beauty",
     image: "/photos/column-4.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -92,6 +103,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "diet",
     image: "/photos/column-5.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -99,6 +111,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "health",
     image: "/photos/column-6.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -106,6 +119,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "beauty",
     image: "/photos/column-7.jpg",
     date: "2021.05.17",
     time: "23:25",
@@ -113,6 +127,7 @@ export const columnCardData = [
     tags: ["魚料理", "和食", "DHA"],
   },
   {
+    key: "beauty",
     image: "/photos/column-8.jpg",
     date: "2021.05.17",
     time: "23:25",

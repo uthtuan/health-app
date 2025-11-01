@@ -7,12 +7,12 @@ const HomePage = lazy(() => import("@pages/home-page"));
 const DiscoveryPage = lazy(() => import("@pages/discovery-page"));
 const NotFoundPage = lazy(() => import("@pages/not-found"));
 const RecordPage = lazy(() => import("@pages/record-page"));
+const LoginPage = lazy(() => import("@pages/login-page"));
 
 
 // Replace this with your real authentication logic
 const isLoggedIn = () => {
-  // e.g. return Boolean(localStorage.getItem('token'))
-  return false; // set to true to simulate logged in
+  return Boolean(localStorage.getItem("token"));
 };
 
 const RequireAuth = ({ children }: { children: React.ReactNode }) => {
@@ -47,6 +47,11 @@ const AppRoutes = () => {
       <Route path={PATH_ROUTERS.DISCOVERY} element={
         <RequireGuest>
           <DiscoveryPage />
+        </RequireGuest>
+      } />
+      <Route path={PATH_ROUTERS.LOGIN} element={
+        <RequireGuest>
+          <LoginPage />
         </RequireGuest>
       } />
       <Route path="*" element={<NotFoundPage />} />

@@ -28,11 +28,21 @@ export const Header: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const handleNavigateHome = () => {
+    const isLoggedIn = Boolean(localStorage.getItem("token"));
+    navigate(isLoggedIn ? "/" : "/discovery");
+  }
+
   return (
     <header className="w-full bg-dark-500 fixed top-0 z-[9999] h-[56px]">
       <div className="max-w-[960px] py-2 flex items-center justify-between relative mx-auto">
         <div className="flex items-center">
-          <img src="/logo.png" alt="Healthy Logo" className="h-8 mr-2" />
+          <img
+            src="/logo.png"
+            alt="Healthy Logo"
+            className="h-8 mr-2 cursor-pointer"
+            onClick={handleNavigateHome}
+          />
         </div>
         <nav className="flex items-center gap-1">
           {navItems.map((item) => {
@@ -48,7 +58,7 @@ export const Header: React.FC = () => {
                 <div className="relative">
                   <img src={item.icon} alt="icon" className="w-6 h-6" />
                   {item.notification && (
-                    <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center text-[10px]">
+                    <span className="absolute top-0 -right-2 bg-orange-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center text-[10px]">
                       {item.notification}
                     </span>
                   )}

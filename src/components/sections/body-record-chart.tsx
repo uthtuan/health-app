@@ -17,8 +17,8 @@ export const BodyRecordChart: FC = () => {
         {bodyRecordChartTypes.map((t) => (
           <Button
             key={t.value}
-            variant={type === t.value ? "gradient" : "outline"}
-            className={`w-16 h-7 rounded-full border-none font-japanese text-base ${type === t.value ? "text-white" : "text-yellow-400 border-yellow-400"}`}
+            variant={type === t.value ? "yellow" : "outline"}
+            className={`w-16 h-7 rounded-[16px] border-none font-japanese font-light text-[15px] ${type === t.value ? "text-white" : "text-yellow-400 border-yellow-400"}`}
             onClick={() => setType(t.value)}
           >
             {t.label}
