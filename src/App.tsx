@@ -1,11 +1,17 @@
-import './App.css'
+import '@/App'
+import { Header } from '@components/layout/header'
+import { Footer } from '@components/layout/footer'
+import AppRoutes from './routes'
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <div className='text-3xl font-bold underline'>
-        Hello Vite + React!
-      </div>
+      <BrowserRouter>
+        <Header />
+        <AppRoutes />
+        <Footer />
+      </BrowserRouter>
     </div>
   )
 }
