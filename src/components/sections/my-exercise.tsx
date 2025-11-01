@@ -1,16 +1,11 @@
-import React from "react";
+import type { FC } from "react";
+import { exerciseData } from "@/components/configs/record";
 
-const exerciseData = Array.from({ length: 16 }).map(() => ({
-  name: "家事全般（立位・軽い）",
-  kcal: 26,
-  time: "10 min",
-}));
-
-export const MyExercise: React.FC = () => (
+export const MyExercise: FC = () => (
   <div className="bg-dark-500 p-6 w-full max-w-6xl mx-auto mt-16"
   >
     <div className="flex items-center gap-6 mb-4">
-      <span className="text-white text-xl font-japanese">MY <br/> EXERCISE</span>
+      <span className="text-white text-xl font-japanese">MY <br /> EXERCISE</span>
       <span className="text-white text-3xl font-light tracking-wide">2021.05.21</span>
     </div>
     <style>{`

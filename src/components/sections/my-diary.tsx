@@ -1,15 +1,9 @@
 
-import React, { useState } from "react";
+import { useState, type FC } from "react";
 import { Button } from "@/components/ui/button";
+import { diaryData } from "@/components/configs/record";
 
-const diaryData = Array.from({ length: 16 }).map(() => ({
-  date: "2021.05.21",
-  time: "23:25",
-  text: `私の日記の記録が一部表示されます。
-テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…`,
-}));
-
-export const MyDiary: React.FC = () => {
+export const MyDiary: FC = () => {
   const [showCount, setShowCount] = useState(8);
   return (
     <div className="w-full mt-16">

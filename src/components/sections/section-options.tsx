@@ -20,7 +20,7 @@ const imgBtnData = [
 ];
 
 const SectionsOptions = () => {
-  return <div className="flex flex-wrap justify-center gap-12 pt-[100px]">
+  return <div className="flex flex-wrap justify-center gap-12">
     {imgBtnData.map((item) => (
       <ImgBtn
         key={item.title}

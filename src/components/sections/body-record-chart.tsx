@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import { useState, type FC } from "react";
 import ChartContainer from "@/components/ui/chart-container";
 import { bodyRecordChartData, bodyRecordChartTypes } from "@/lib/mockdata";
 import { Button } from "@/components/ui/button";
 
-export const BodyRecordChart: React.FC = () => {
+export const BodyRecordChart: FC = () => {
   const [type, setType] = useState("year");
-
   const chartData = bodyRecordChartData[type] || [];
   return (
     <div className="bg-[#2E2E2E] w-full p-6 mt-16">

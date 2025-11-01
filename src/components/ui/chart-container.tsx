@@ -18,14 +18,17 @@ interface ChartContainerProps {
   bottomPosition?: number;
 }
 
-const ChartContainer: React.FC<ChartContainerProps> = ({ data, chartHeight = 260,
+const ChartContainer: React.FC<ChartContainerProps> = ({
+  data,
+  chartHeight = 260,
   topPosition = 20,
   rightPosition = 20,
   leftPosition = 20,
   bottomPosition = 0,
-}) => (
-  <div className={`w-full h-[${chartHeight}px] bg-[#2E2E2E]`}>
-    <ResponsiveContainer width="100%" height="100%">
+}) => {
+  return (
+  <div className={`w-full h-[${chartHeight}px] bg-[#2E2E2E] min-w-0 min-h-[100px]`}>
+    <ResponsiveContainer width="100%" height={chartHeight} >
       <LineChart data={data} margin={{ top: topPosition, right: rightPosition, left: leftPosition, bottom: bottomPosition }}>
         <CartesianGrid stroke="#555" vertical={true} horizontal={false} />
         <XAxis dataKey="name" stroke="#fff" tick={{ fontSize: 14 }} interval={0} axisLine={false} tickLine={false} />
@@ -36,6 +39,6 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, chartHeight = 260
       </LineChart>
     </ResponsiveContainer>
   </div>
-);
+)};
 
 export default ChartContainer;

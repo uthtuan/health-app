@@ -1,0 +1,18 @@
+export const foodPhotos = [
+  { image: "/photos/m01.jpg", day: "05.21", filter: "Morning" },
+  { image: "/photos/l03.jpg", day: "05.21", filter: "Lunch" },
+  { image: "/photos/d01.jpg", day: "05.21", filter: "Dinner" },
+  { image: "/photos/l01.jpg", day: "05.21", filter: "Snack" },
+  { image: "/photos/m01.jpg", day: "05.20", filter: "Morning" },
+  { image: "/photos/l02.jpg", day: "05.20", filter: "Lunch" },
+  { image: "/photos/d02.jpg", day: "05.20", filter: "Dinner" },
+  { image: "/photos/s01.jpg", day: "05.20", filter: "Snack" },
+  { image: "/photos/m01.jpg", day: "05.19", filter: "Morning" },
+  { image: "/photos/l03.jpg", day: "05.19", filter: "Lunch" },
+  { image: "/photos/d01.jpg", day: "05.19", filter: "Dinner" },
+  { image: "/photos/l01.jpg", day: "05.19", filter: "Snack" },
+  { image: "/photos/m01.jpg", day: "05.18", filter: "Morning" },
+  { image: "/photos/l02.jpg", day: "05.18", filter: "Lunch" },
+  { image: "/photos/d02.jpg", day: "05.18", filter: "Dinner" },
+  { image: "/photos/s01.jpg", day: "05.18", filter: "Snack" },
+];

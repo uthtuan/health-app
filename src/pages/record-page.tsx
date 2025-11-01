@@ -9,7 +9,7 @@ import type { FC } from "react";
 
 const RecordPage: FC = () => {
   return (
-    <div>
+    <div className="pt-[100px]">
       <div className="max-w-[960px] mx-auto relative">
         <SectionsOptions />
         <BodyRecordChart />

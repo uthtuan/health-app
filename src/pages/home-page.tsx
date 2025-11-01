@@ -12,27 +12,7 @@ import DinnerIcon from "@assets/icons/dinner.svg?react";
 import SnackIcon from "@assets/icons/snack.svg?react";
 import FoodPhotoCard from "@/components/ui/food-photo-card";
 import { Button } from "@/components/ui/button";
-
-const foodPhotos = [
-  { image: "/photos/m01.jpg", day: "05.21", filter: "Morning" },
-  { image: "/photos/l03.jpg", day: "05.21", filter: "Lunch" },
-  { image: "/photos/d01.jpg", day: "05.21", filter: "Dinner" },
-  { image: "/photos/l01.jpg", day: "05.21", filter: "Snack" },
-  { image: "/photos/m01.jpg", day: "05.20", filter: "Morning" },
-  { image: "/photos/l02.jpg", day: "05.20", filter: "Lunch" },
-  { image: "/photos/d02.jpg", day: "05.20", filter: "Dinner" },
-  { image: "/photos/s01.jpg", day: "05.20", filter: "Snack" },
-  { image: "/photos/m01.jpg", day: "05.19", filter: "Morning" },
-  { image: "/photos/l03.jpg", day: "05.19", filter: "Lunch" },
-  { image: "/photos/d01.jpg", day: "05.19", filter: "Dinner" },
-  { image: "/photos/l01.jpg", day: "05.19", filter: "Snack" },
-  { image: "/photos/m01.jpg", day: "05.18", filter: "Morning" },
-  { image: "/photos/l02.jpg", day: "05.18", filter: "Lunch" },
-  { image: "/photos/d02.jpg", day: "05.18", filter: "Dinner" },
-  { image: "/photos/s01.jpg", day: "05.18", filter: "Snack" },
-
-];
-
+import { foodPhotos } from "@/components/configs/home";
 
 const filterItems = [
   { icon: <MorningIcon />, label: "Morning" },
@@ -44,8 +24,8 @@ const filterItems = [
 const HomePage: FC = () => {
   const [showCount, setShowCount] = useState(8);
   return (
-    <div className="mx-auto relative">
-      <div className="flex flex-row w-full mt-[56px]">
+    <div className="mx-auto relative pt-[56px]">
+      <div className="flex flex-row w-full">
         <div className="flex-1 flex items-center justify-center">
           <CircleChart
             date="05/21"
