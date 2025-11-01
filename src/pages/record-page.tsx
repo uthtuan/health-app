@@ -2,7 +2,6 @@
 import { MyExercise } from "@/components/sections/my-exercise";
 import { MyDiary } from "@/components/sections/my-diary";
 import { BodyRecordChart } from "@/components/sections/body-record-chart";
-import { ChevronUp } from 'lucide-react';
 import SectionsOptions from "@/components/sections/section-options";
 import ScrollToTopButton from "@/components/ui/scroll-to-top-btn";
 import type { FC } from "react";
