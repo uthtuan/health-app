@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import { useState, type FC } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { HeaderMenu } from "./header-menu";
 import { Button } from "@/components/ui/button";
@@ -23,7 +23,7 @@ const navItems = [
   },
 ];
 
-export const Header: React.FC = () => {
+export const Header: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();

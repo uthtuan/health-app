@@ -2,7 +2,7 @@ import type { FC } from "react";
 import { exerciseData } from "@/components/configs/record";
 
 export const MyExercise: FC = () => (
-  <div className="bg-dark-500 p-6 w-full max-w-6xl mx-auto mt-16"
+  <div className="bg-dark-500 p-6 w-full max-w-6xl mx-auto mt-16" id="my-exercise"
   >
     <div className="flex items-center gap-6 mb-4">
       <span className="text-white text-[15px] font-inter font-light">MY <br /> EXERCISE</span>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import RecommendFilterBtn from "@/components/ui/recommend-filter-btn";
 import ColumnCard from "@/components/ui/column-card";
 import { filterItems, columnCardData } from "@/components/configs/discover";
+import ScrollToTopButton from "@/components/ui/scroll-to-top-btn";
 
 const DiscoveryPage: FC = () => {
   const [showCount, setShowCount] = useState(8);
@@ -24,8 +25,8 @@ const DiscoveryPage: FC = () => {
   const visibleCards = filteredCards.slice(0, showCount);
 
   return (
-    <div className="w-full max-w-[960px] mx-auto px-4 pt-[70px]">
-      <div className="flex flex-wrap gap-4 justify-center my-8">
+    <div className="w-full max-w-[960px] mx-auto pt-[70px]">
+      <div className="flex flex-wrap gap-8 justify-center mt-8 mb-10">
         {filterItemsWithKey.map((item) => (
           <RecommendFilterBtn
             key={item.key}
@@ -35,11 +36,10 @@ const DiscoveryPage: FC = () => {
               setSelectedFilter(item.key);
               setShowCount(8);
             }}
-            className={selectedFilter === item.key ? 'bg-dark-600 text-white border-yellow-400' : 'bg-dark-600 text-yellow-400 border-yellow-400 hover:bg-yellow-50'}
           />
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
         {visibleCards.map((item, idx) => {
           const { key, ...rest } = item;
           return <ColumnCard key={item.key + '-' + idx} {...rest} />;
@@ -56,6 +56,7 @@ const DiscoveryPage: FC = () => {
           </Button>
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }

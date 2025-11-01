@@ -6,7 +6,7 @@ import { diaryData } from "@/components/configs/record";
 export const MyDiary: FC = () => {
   const [showCount, setShowCount] = useState(8);
   return (
-    <div className="w-full mt-16">
+    <div className="w-full mt-16" id="my-diary">
       <h2 className="text-[22px] font-inter mb-4 text-dark-500">MY DIARY</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {diaryData.slice(0, showCount).map((item, idx) => (

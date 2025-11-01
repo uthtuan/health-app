@@ -1,4 +1,4 @@
-import React from "react";
+import type { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { menuItems } from "@/components/configs/general";
 
@@ -8,7 +8,7 @@ interface HeaderMenuProps {
   onClose?: () => void;
 }
 
-export const HeaderMenu: React.FC<HeaderMenuProps> = ({ open, onClose }) => {
+export const HeaderMenu: FC<HeaderMenuProps> = ({ open, onClose }) => {
   const navigate = useNavigate();
   if (!open) return null;
   const isLoggedIn = Boolean(localStorage.getItem("token"));

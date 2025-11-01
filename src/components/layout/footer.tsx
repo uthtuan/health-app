@@ -1,8 +1,8 @@
-import React from "react";
+import type { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { footerLinks } from "@/components/configs/general";
 
-export const Footer: React.FC = () => {
+export const Footer: FC = () => {
   return (
     <footer className="w-full bg-dark-500 h-[128px] flex items-center">
       <div className="max-w-[960px] mx-auto w-full">

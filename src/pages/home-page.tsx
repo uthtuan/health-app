@@ -4,7 +4,7 @@ import ChartContainer from "@/components/ui/chart-container";
 import CircleChart from "@/components/ui/circle-chart";
 import type { FC } from "react";
 import { useMemo, useState } from "react";
-import { bodyRecordChartData } from "@/lib/mockdata";
+import { bodyRecordChartData } from "@/components/configs/record";
 import FilterBtn from "@/components/ui/filter-btn";
 import MorningIcon from "@assets/icons/morning.svg?react";
 import LunchIcon from "@assets/icons/lunch.svg?react";
@@ -13,6 +13,7 @@ import SnackIcon from "@assets/icons/snack.svg?react";
 import FoodPhotoCard from "@/components/ui/food-photo-card";
 import { Button } from "@/components/ui/button";
 import { foodPhotos } from "@/components/configs/home";
+import ScrollToTopButton from "@/components/ui/scroll-to-top-btn";
 
 const filterItems = [
   { icon: <MorningIcon />, label: "Morning" },
@@ -84,6 +85,7 @@ const HomePage: FC = () => {
           </Button>
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }
